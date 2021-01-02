@@ -1,0 +1,25 @@
+section1 => https://github.com/divyenduz/blog-graphql/tree/section1
+section2 => https://github.com/divyenduz/blog-graphql/tree/section2
+section3 => https://github.com/divyenduz/blog-graphql/tree/section3
+section4 => https://github.com/divyenduz/blog-graphql/tree/section4
+section5 => https://github.com/divyenduz/blog-graphql/tree/section5
+section6 => https://github.com/divyenduz/blog-graphql/tree/section6
+section7 => https://github.com/divyenduz/blog-graphql/tree/section7
+section8 => https://github.com/divyenduz/blog-graphql/tree/section8
+
+video1.3 => https://github.com/divyenduz/blog-graphql/tree/video1.3
+video2.1 => https://github.com/divyenduz/blog-graphql/tree/video2.1
+video3.1 => https://github.com/divyenduz/blog-graphql/tree/video3.1
+video3.2 => https://github.com/divyenduz/blog-graphql/tree/video3.2
+video4.1 => https://github.com/divyenduz/blog-graphql/tree/video4.1
+video4.2 => https://github.com/divyenduz/blog-graphql/tree/video4.2
+video4.3 => https://github.com/divyenduz/blog-graphql/tree/video4.3
+video5.2 => https://github.com/divyenduz/blog-graphql/tree/video5.2
+video5.3 => https://github.com/divyenduz/blog-graphql/tree/video5.3
+video6.2 => https://github.com/divyenduz/blog-graphql/tree/video6.2
+video6.3 => https://github.com/divyenduz/blog-graphql/tree/video6.3
+video7.1 => https://github.com/divyenduz/blog-graphql/tree/video7.1
+video7.3 => https://github.com/divyenduz/blog-graphql/tree/video7.3
+video8.1 => https://github.com/divyenduz/blog-graphql/tree/video8.1
+video8.2 => https://github.com/divyenduz/blog-graphql/tree/video8.2
+video8.3 => https://github.com/divyenduz/blog-graphql/tree/video8.3
