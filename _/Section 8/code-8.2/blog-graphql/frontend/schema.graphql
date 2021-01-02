@@ -1,0 +1,129 @@
+input CreatePostInput {
+  title: String!
+  content: String!
+  userId: String!
+  clientMutationId: String
+}
+
+type CreatePostPayload {
+  post: Post
+  clientMutationId: String
+}
+
+input CreateUserInput {
+  username: String!
+  password: String!
+  fullname: String!
+  clientMutationId: String
+}
+
+type CreateUserPayload {
+  message: String
+  clientMutationId: String
+}
+
+input LoginUserInput {
+  username: String!
+  password: String!
+  clientMutationId: String
+}
+
+type LoginUserPayload {
+  user: User
+  clientMutationId: String
+}
+
+# Mutation interface for our blog
+type Mutation {
+  createPost(input: CreatePostInput!): CreatePostPayload
+  createUser(input: CreateUserInput!): CreateUserPayload
+  loginUser(input: LoginUserInput!): LoginUserPayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# Information about pagination in a connection.
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+# Post type definition
+type Post implements Node {
+  # The ID of an object
+  id: ID!
+
+  # Title of the post
+  title: String
+
+  # Content of the post
+  content: String
+
+  # Author of the post
+  author: User
+}
+
+# A connection to a list of items.
+type PostConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [PostEdge]
+}
+
+# An edge in a connection.
+type PostEdge {
+  # The item at the end of the edge
+  node: Post
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Query interface for our blog
+type Query {
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+
+  # Viewer pattern implementation
+  viewer: Viewer!
+}
+
+# User type definition
+type User implements Node {
+  # The ID of an object
+  id: ID!
+
+  # User Full Name
+  fullname: String
+
+  # User Username
+  username: String
+
+  # User Password
+  password: String
+}
+
+type Viewer {
+  allPosts(after: String, first: Int, before: String, last: Int, order: String): PostConnection!
+  id: ID!
+  User(id: ID, username: String): User
+}
+
